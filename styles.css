@@ -1,0 +1,606 @@
+/* ========== General Styles ========== */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: beige !important;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Ensure ALL sections have the beige background */
+.main-content, .about-section, .gallery-container, .contact-form {
+    background-color: beige !important;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a90e2;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navbar */
+.navbar-nav .nav-link {
+    color: #03a9fc;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Style for active/current page link (black) */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.active .nav-link {
+    color: #000000 !important;
+    font-weight: bold;
+}
+
+/* Hover effect (keep the underline effect you already have) */
+.navbar-nav .nav-link:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+/* Keep active link black even on hover */
+.navbar-nav .nav-link.active:hover,
+.navbar-nav .nav-item.active .nav-link:hover {
+    color: #000000 !important;
+    text-decoration: underline;
+}
+
+/* Profile Image */
+.profile-img {
+    max-width: 180px;
+    border: 3px solid #0d6efd;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.02);
+}
+
+/* ========== Home Page ========== */
+.main-content {
+    width: 95%;
+    margin: auto;
+    padding: 15px;
+    flex: 1;
+    text-align: center;
+}
+
+/* ========== About Page ========== */
+.about-section {
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.about-section h2 {
+    color: #4a90e2;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.about-section p {
+    font-size: 16px;
+    max-width: 800px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+/* ========== Gallery Page ========== */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* ========== Hover Effect for Image & Text ========== */
+.hover-card {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.hover-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Ichigo Image Styling */
+.ichigo-img {
+    width: 100%;
+    max-width: 736px;
+    height: auto;
+    aspect-ratio: 736 / 1308;
+    object-fit: cover;
+}
+
+/* Gallery Carousel Styles */
+.carousel-item {
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 10px;
+    bottom: 20px;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 5%;
+    opacity: 0.8;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-indicators {
+    bottom: 0;
+}
+
+.anime-img-carousel {
+    height: 280px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.anime-img {
+    height: 180px;
+    object-fit: cover;
+}
+
+/* ========== Contact Page ========== */
+.contact-form {
+    max-width: 500px; /* Reduced from 100% to make form narrower */
+    margin: auto;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white !important; /* Override the beige background for the form */
+}
+
+/* Form layout - create a column structure */
+.contact-form .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Ensure form elements have white background */
+.contact-form .form-control, .contact-form button {
+    background-color: white;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.contact-form h2 {
+    color: #4a90e2;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.contact-form .form-control {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/* Responsive adjustments for the form */
+@media (min-width: 576px) {
+    .contact-form {
+        max-width: 450px;
+        padding: 25px;
+    }
+}
+
+@media (min-width: 768px) {
+    .contact-form {
+        max-width: 500px;
+        padding: 30px;
+    }
+}
+
+@media (min-width: 992px) {
+    .contact-form {
+        max-width: 550px;
+        padding: 35px;
+    }
+}
+
+/* ========== Card Styles ========== */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* ========== List Group ========== */
+.list-group-item {
+    transition: background-color 0.3s ease;
+    background-color: white;
+}
+
+.list-group-item:hover {
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+/* ========== Forms ========== */
+.form-control:focus {
+    border-color: #0d6efd;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* ========== Buttons ========== */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #357ab7;
+}
+
+/* ========== Footer ========== */
+.footer {
+    background-color: #4a90e2 !important; /* Changed from black to match header color #4a90e2 */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: auto;
+    font-size: 12px;
+}
+
+/* Social Icons */
+.footer a {
+    text-decoration: none;
+    margin: 0 4px;
+    display: inline-block;
+}
+
+.footer a i {
+    font-size: 16px;
+    color: white;
+    transition: 0.3s ease-in-out;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+/* Icon Background Colors */
+.footer a i.fa-linkedin {
+    background-color: #0077b5;
+}
+
+.footer a i.fa-facebook {
+    background-color: #1877f2;
+}
+
+.footer a i.fa-instagram {
+    background: linear-gradient(45deg, #f9ce34, #ee2a7b, #6228d7);
+}
+
+.footer a i.fa-twitter {
+    background-color: #1da1f2;
+}
+
+/* Icon Hover Effects */
+.footer a i:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Typography adjustments for smaller screens */
+.display-5 {
+    font-size: 1.8rem;
+}
+
+.card-title {
+    font-size: 1.2rem;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+}
+
+/* ========== Responsive Design Using Bootstrap Breakpoints ========== */
+/* For Small devices (sm: ≥576px) */
+@media (min-width: 576px) {
+    .profile-img {
+        max-width: 220px;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+    
+    .main-content {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .about-section {
+        padding: 35px 20px;
+    }
+    
+    .about-section h2 {
+        font-size: 28px;
+    }
+    
+    .about-section p {
+        font-size: 16px;
+    }
+    
+    .anime-img-carousel {
+        height: 320px;
+    }
+    
+    .anime-img {
+        height: 180px;
+    }
+    
+    .gallery-item {
+        width: 45%;
+    }
+    
+    .contact-form {
+        max-width: 90%;
+    }
+    
+    .footer {
+        font-size: 13px;
+        padding: 10px 15px;
+    }
+    
+    .card-title {
+        font-size: 1.3rem;
+    }
+}
+
+/* For Medium devices (md: ≥768px) */
+@media (min-width: 768px) {
+    .profile-img {
+        max-width: 250px;
+    }
+    
+    .display-5 {
+        font-size: 2.5rem;
+    }
+    
+    .main-content {
+        width: 85%;
+        padding: 20px;
+    }
+    
+    .about-section {
+        padding: 40px 20px;
+    }
+    
+    .about-section h2 {
+        font-size: 30px;
+    }
+    
+    .about-section p {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+    
+    .anime-img-carousel {
+        height: 400px;
+    }
+    
+    .anime-img {
+        height: 200px;
+    }
+    
+    .gallery-item {
+        width: 30%;
+    }
+    
+    .gallery-container {
+        gap: 20px;
+        padding: 30px;
+    }
+    
+    .contact-form {
+        max-width: 80%;
+        padding: 25px;
+    }
+    
+    .contact-form h2 {
+        font-size: 26px;
+    }
+    
+    .footer {
+        font-size: 14px;
+        padding: 12px 20px;
+    }
+    
+    .footer a i {
+        font-size: 18px;
+        padding: 6px;
+    }
+    
+    .card-title {
+        font-size: 1.4rem;
+    }
+    
+    .carousel-caption {
+        padding: 12px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1.1rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}
+
+/* For Large devices (lg: ≥992px) */
+@media (min-width: 992px) {
+    .profile-img {
+        max-width: 280px;
+    }
+    
+    .display-5 {
+        font-size: 3rem;
+    }
+    
+    .main-content {
+        width: 80%;
+    }
+    
+    .about-section h2 {
+        font-size: 32px;
+    }
+    
+    .about-section p {
+        font-size: 18px;
+    }
+    
+    .anime-img-carousel {
+        height: 450px;
+    }
+    
+    .anime-img {
+        height: 220px;
+    }
+    
+    .gallery-item {
+        width: 22%;
+    }
+    
+    .gallery-container {
+        padding: 40px;
+    }
+    
+    .contact-form {
+        max-width: 600px;
+        padding: 30px;
+    }
+    
+    .contact-form h2 {
+        font-size: 28px;
+    }
+    
+    .carousel-caption h5 {
+        font-size: 1.25rem;
+    }
+    
+    .carousel-caption p {
+        font-size: 1rem;
+    }
+    
+    .card-title {
+        font-size: 1.5rem;
+    }
+    
+    .navbar-nav .nav-link {
+        font-size: 18px;
+    }
+}
+
+/* For X-Large devices (xl: ≥1200px) */
+@media (min-width: 1200px) {
+    .profile-img {
+        max-width: 300px;
+    }
+    
+    .display-5 {
+        font-size: 3.5rem;
+    }
+    
+    .anime-img-carousel {
+        height: 500px;
+    }
+    
+    .anime-img {
+        height: 230px;
+    }
+    
+    .gallery-item {
+        width: 300px;
+    }
+    
+    .gallery-item img {
+        height: 250px;
+    }
+}
+
+/* For XX-Large devices (xxl: ≥1400px) */
+@media (min-width: 1400px) {
+    .main-content {
+        width: 75%;
+    }
+    
+    .anime-img-carousel {
+        height: 550px;
+    }
+    
+    .anime-img {
+        height: 250px;
+    }
+    
+    .about-section p {
+        max-width: 900px;
+    }
+}
